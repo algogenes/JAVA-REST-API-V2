@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>
+// SOMETIMES THE API WILL FAIL TO CONNECT TO MYSQL SERVER
+	 // Steps to resolve:
+	 
+	 //A: Make sure the mysql server is running, here I used wamp.
+	 //1. Download the mysql jdbc driver and unzip it (If you have not).
+	 //2. Open the unzipped folder named mysql-connector-java-8.0.13(version as on today's date) and copy the executable jar //file named mysql-connector-java-8.0.13.
+	 //3. Now if you are doing something with webapps(Using Tomcat server, eclipse, java ee), then go to the location where //tomcat files are placed and paste the jar file(mentioned in step 2) in the tomcat\bin\lib, for example in my case it is //C:\Users\ujjwa\Desktop\Practice\Winter\apache-tomcat-9.0.14\lib
+	 //If not working with webapps, then ignore this step.
+	 //4. Go to the locations where jdk and jre are installed and paste the jar file in the ext directory, for example in my //case they are
+	 //C:\Program Files\Java\jre1.8.0_191\lib\ext
+	 //C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext
+	 //5. Then recompile the code using the command javac .java
+	 //6. Then run the file. It should work fine as in my case it was displaying desired output. //
+
+	 //B) Add following line of code just before the call to Connection.getConnection(url, props) method
+	 //load and register JDBC driver for MySQL
+	 //Class.forName("com.mysql.jdbc.Driver"); sometimes you will add the class not found  throws exception for each method //where the driver(Class.forName("com.mysql.jdbc.Driver");) is loaded
+	 
+	
+</p>
+</body>
+</html>
